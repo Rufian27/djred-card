@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DJ RED</title>
+
+<style>
+
+:root{
+  --bg:#000000;
+  --card:#0d0d0d;
+  --border:#1f1f1f;
+  --text:#ffffff;
+  --muted:#b3b3b3;
+  --accent:#ff2a2a;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+.container{
+  max-width:520px;
+  margin:auto;
+  padding:40px 16px 60px;
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:26px;
+  overflow:hidden;
+}
+
+.hero{
+  padding:40px 24px 30px;
+  text-align:center;
+}
+
+.avatar{
+  width:120px;
+  height:120px;
+  margin:auto;
+  border-radius:50%;
+  overflow:hidden;
+  border:2px solid #1f1f1f;
+}
+
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+h1{
+  margin:18px 0 6px;
+  font-size:30px;
+}
+
+.subtitle{
+  color:var(--muted);
+  font-size:14px;
+}
+
+.section{
+  padding:0 18px 22px;
+}
+
+.save-btn{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  padding:16px;
+  border-radius:16px;
+  text-decoration:none;
+  font-weight:700;
+  background:var(--accent);
+  color:white;
+  margin-top:6px;
+}
+
+.links{
+  margin-top:16px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.link{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px 16px;
+  border-radius:16px;
+  border:1px solid var(--border);
+  text-decoration:none;
+  color:white;
+  background:#111111;
+  transition:0.15s;
+}
+
+.link:hover{
+  background:#1a1a1a;
+}
+
+.left{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+.icon{
+  width:38px;
+  height:38px;
+  border-radius:10px;
+  background:#1f1f1f;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:13px;
+  font-weight:700;
+}
+
+.text small{
+  color:var(--muted);
+  display:block;
+  font-size:12px;
+  margin-top:2px;
+}
+
+.arrow{
+  opacity:.5;
+}
+
+.footer{
+  text-align:center;
+  margin-top:26px;
+  color:#666;
+  font-size:12px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<div class="hero">
+
+<div class="avatar">
+  <img src="djred.jpg" alt="DJ RED">
+</div>
+
+<h1>DJ RED</h1>
+
+<div class="subtitle">
+DJ • Bookings & Events
+</div>
+
+</div>
+
+<div class="section">
+
+<a class="save-btn" href="dj-red.vcf" download>
+Guardar contacto
+</a>
+
+<div class="links">
+
+<a class="link" href="https://wa.me/56988853172" target="_blank">
+<div class="left">
+<div class="icon">WA</div>
+<div class="text">
+WhatsApp
+<small>+56 9 8885 3172</small>
+</div>
+</div>
+<div class="arrow">→</div>
+</a>
+
+<a class="link" href="https://instagram.com/djred_cl" target="_blank">
+<div class="left">
+<div class="icon">IG</div>
+<div class="text">
+Instagram
+<small>@djred_cl</small>
+</div>
+</div>
+<div class="arrow">→</div>
+</a>
+
+<a class="link" href="https://soundcloud.com/djred_cl/" target="_blank">
+<div class="left">
+<div class="icon">SC</div>
+<div class="text">
+SoundCloud
+<small>djred_cl</small>
+</div>
+</div>
+<div class="arrow">→</div>
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer">
+DJ RED
+</div>
+
+</div>
+
+</body>
+</html>
