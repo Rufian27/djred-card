@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DJ RED | Press Kit</title>
+  <meta name="description" content="DJ RED - bookings, contacto, sets, setup propio y rider técnico.">
+  <style>
+    :root{
+      --bg:#000000;
+      --panel:#0b0b0b;
+      --panel-2:#111111;
+      --border:#222222;
+      --text:#ffffff;
+      --muted:#b7b7b7;
+      --soft:#7d7d7d;
+      --accent:#ff2a2a;
+      --accent-2:#cc1f1f;
+      --radius:24px;
+      --radius-sm:16px;
+      --shadow:0 18px 40px rgba(0,0,0,.35);
+      --max:560px;
+    }
+
+    *{box-sizing:border-box}
+
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.45;
+    }
+
+    img{max-width:100%;display:block}
+
+    a{color:inherit}
+
+    .container{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:22px 14px 56px;
+    }
+
+    .card{
+      background:linear-gradient(180deg,#0a0a0a 0%, #0f0f0f 100%);
+      border:1px solid var(--border);
+      border-radius:32px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+
+    .hero{
+      position:relative;
+      padding:26px 18px 22px;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.1), rgba(0,0,0,.85)),
+        url('djred_cover.jpg') center/cover no-repeat;
+      min-height:320px;
+      display:flex;
+      align-items:flex-end;
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, rgba(0,0,0,.15) 0%, rgba(0,0,0,.55) 54%, rgba(0,0,0,.92) 100%);
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:1;
+      width:100%;
+      text-align:center;
+    }
+
+    .avatar{
+      width:108px;
+      height:108px;
+      border-radius:50%;
+      overflow:hidden;
+      margin:0 auto 14px;
+      border:2px solid rgba(255,255,255,.12);
+      box-shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+
+    .avatar img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    h1{
+      margin:0;
+      font-size:2rem;
+      letter-spacing:.04em;
+    }
+
+    .tagline{
+      margin:8px auto 0;
+      max-width:420px;
+      color:#dfdfdf;
+      font-size:.95rem;
+    }
+
+    .content{
+      padding:18px 14px 8px;
+    }
+
+    .sticky-actions{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      margin-bottom:14px;
+    }
+
+    .btn,
+    .btn-secondary,
+    .chip-link{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-decoration:none;
+      border-radius:16px;
+      min-height:52px;
+      padding:12px 14px;
+      font-weight:700;
+      transition:.18s ease;
+    }
+
+    .btn{
+      background:linear-gradient(180deg,var(--accent),var(--accent-2));
+      color:#fff;
+      border:1px solid rgba(255,255,255,.06);
+    }
+
+    .btn:hover{transform:translateY(-1px)}
+
+    .btn-secondary{
+      background:var(--panel-2);
+      border:1px solid var(--border);
+      color:var(--text);
+    }
+
+    .btn-secondary:hover,
+    .chip-link:hover,
+    .link-card:hover,
+    .gallery-item:hover,
+    .equipment-card:hover{background:#151515}
+
+    .chips{
+      display:grid;
+      grid-template-columns:1fr 1fr 1fr;
+      gap:10px;
+      margin-bottom:18px;
+    }
+
+    .chip-link{
+      min-height:48px;
+      background:var(--panel-2);
+      border:1px solid var(--border);
+      font-size:.92rem;
+    }
+
+    .section{
+      margin:0 0 16px;
+      padding:18px 14px;
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:22px;
+    }
+
+    .section h2{
+      margin:0 0 8px;
+      font-size:1.1rem;
+      letter-spacing:.02em;
+    }
+
+    .section p{
+      margin:0;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    .info-list{
+      display:grid;
+      gap:10px;
+      margin-top:14px;
+    }
+
+    .link-card{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      padding:14px 14px;
+      border:1px solid var(--border);
+      border-radius:16px;
+      background:var(--panel-2);
+      text-decoration:none;
+    }
+
+    .link-main{display:flex;align-items:center;gap:12px;min-width:0}
+
+    .icon{
+      width:40px;
+      height:40px;
+      border-radius:12px;
+      background:#1c1c1c;
+      border:1px solid #2a2a2a;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:.85rem;
+      font-weight:800;
+      flex:0 0 auto;
+    }
+
+    .link-text{min-width:0}
+
+    .link-title{
+      font-weight:700;
+      font-size:.95rem;
+    }
+
+    .link-sub{
+      margin-top:2px;
+      color:var(--soft);
+      font-size:.83rem;
+      word-break:break-word;
+    }
+
+    .arrow{color:#777;font-size:1rem;flex:0 0 auto}
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin-top:14px;
+    }
+
+    .equipment-card,
+    .gallery-item{
+      background:var(--panel-2);
+      border:1px solid var(--border);
+      border-radius:18px;
+      overflow:hidden;
+    }
+
+    .equipment-card img,
+    .gallery-item img{
+      width:100%;
+      aspect-ratio:4/3;
+      object-fit:cover;
+      background:#121212;
+    }
+
+    .equipment-body,
+    .gallery-body{
+      padding:12px;
+    }
+
+    .equipment-title,
+    .gallery-title{
+      font-size:.93rem;
+      font-weight:700;
+      margin:0 0 4px;
+    }
+
+    .equipment-text,
+    .gallery-text{
+      font-size:.83rem;
+      color:var(--soft);
+      margin:0;
+    }
+
+    .bullet-list{
+      margin:12px 0 0;
+      padding-left:18px;
+      color:var(--muted);
+      font-size:.93rem;
+    }
+
+    .bullet-list li + li{margin-top:8px}
+
+    .mini-title{
+      margin:16px 0 8px;
+      color:#fff;
+      font-size:.9rem;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+
+    .footer{
+      text-align:center;
+      margin-top:18px;
+      color:#6f6f6f;
+      font-size:.78rem;
+    }
+
+    @media (max-width:420px){
+      .chips{grid-template-columns:1fr}
+      .sticky-actions,
+      .grid-2{grid-template-columns:1fr}
+      .hero{min-height:280px}
+      h1{font-size:1.8rem}
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <header class="hero">
+        <div class="hero-content">
+          <div class="avatar">
+            <img src="djred.jpeg" alt="DJ RED">
+          </div>
+          <h1>DJ RED</h1>
+          <p class="tagline">Bookings, eventos privados y sesiones. Contacto directo, sets y rider técnico en un solo lugar.</p>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="sticky-actions">
+          <a class="btn" href="https://wa.me/56988853172?text=Hola%20DJ%20RED,%20te%20escribo%20por%20un%20evento" target="_blank" rel="noopener noreferrer">Reservar / Consultar</a>
+          <a class="btn-secondary" href="dj-red.vcf" download>Guardar contacto</a>
+        </div>
+
+        <div class="chips">
+          <a class="chip-link" href="https://instagram.com/djred_cl" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a class="chip-link" href="https://soundcloud.com/djred_cl/" target="_blank" rel="noopener noreferrer">SoundCloud</a>
+          <a class="chip-link" href="#rider">Rider técnico</a>
+        </div>
+
+        <section class="section">
+          <h2>Sobre DJ RED</h2>
+          <p>Desarrollo sets orientados a generar ambiente y energía adaptándome tanto a espacios con infraestructura instalada, como a formatos móviles para eventos privados, manteniendo una propuesta clara, versátil y profesional.</p>
+        </section>
+
+        <section class="section">
+          <h2>Formatos</h2>
+          <div class="grid-2">
+            <article class="equipment-card">
+              <div class="equipment-body">
+                <h3 class="equipment-title">Club / Venue con infraestructura</h3>
+                <p class="equipment-text">Formato pensado para bares, clubes, rooftops, terrazas, brunches y espacios que ya cuentan con cabina y sistema de audio. DJ RED se integra al setup disponible y trabaja sobre estándares compatibles con Serato y cabinas profesionales.</p>
+              </div>
+            </article>
+
+            <article class="equipment-card">
+              <div class="equipment-body">
+                <h3 class="equipment-title">Evento privado / DJ móvil</h3>
+                <p class="equipment-text">Formato orientado a celebraciones, eventos privados y ocasiones donde se requiere una solución más integral. Puede contemplar coordinación técnica, setup propio y una experiencia más cerrada según el tamaño y tipo de evento.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Contacto y links</h2>
+          <div class="info-list">
+            <a class="link-card" href="https://wa.me/56988853172" target="_blank" rel="noopener noreferrer">
+              <div class="link-main">
+                <div class="icon">WA</div>
+                <div class="link-text">
+                  <div class="link-title">WhatsApp</div>
+                  <div class="link-sub">+56 9 8885 3172</div>
+                </div>
+              </div>
+              <div class="arrow">→</div>
+            </a>
+
+            <a class="link-card" href="https://instagram.com/djred_cl" target="_blank" rel="noopener noreferrer">
+              <div class="link-main">
+                <div class="icon">IG</div>
+                <div class="link-text">
+                  <div class="link-title">Instagram</div>
+                  <div class="link-sub">@djred_cl</div>
+                </div>
+              </div>
+              <div class="arrow">→</div>
+            </a>
+
+            <a class="link-card" href="https://soundcloud.com/djred_cl/" target="_blank" rel="noopener noreferrer">
+              <div class="link-main">
+                <div class="icon">SC</div>
+                <div class="link-text">
+                  <div class="link-title">SoundCloud</div>
+                  <div class="link-sub">Sets y mixes</div>
+                </div>
+              </div>
+              <div class="arrow">→</div>
+            </a>
+          </div>
+        </section>
+
+        <section class="section" id="rider">
+          <h2>Rider técnico</h2>
+          <p>Acá se presentan las necesidades técnicas —sonido, iluminación, backline, etc— para realizar presentación</p>
+
+          <div class="mini-title">Club / Venue con infraestructura</div>
+          <ul class="bullet-list">
+            <li>Conexiones XLR.</li>
+            <li>Toma de corriente.</li>
+            <li>Pioneer DDJ-REV5 y/o REV7.</li>
+            <li>Mixer Pioneer DJM-S7, S9 o S11 junto a CDJ 2000NX o cualquier reproductor con HID compatible con Serato.</li>
+            <li>Pioneer DDJ-SR/SR2 como alternativa según formato.</li>
+            <li>Monitor de cabina o referencia adecuada para mezcla, idealmente orientado hacia el DJ.</li>
+            <li>Mesa o superficie estable, de 1 metro de alto, nivelada y con espacio suficiente para setup y laptop.</li>
+          </ul>
+
+          <div class="mini-title">Evento privado / DJ móvil</div>
+          <ul class="bullet-list">
+            <li>Requiere espacio definido, estable y protegido para instalación del setup.</li>
+            <li>Disponibilidad de toma de corriente cercana y en buen estado.</li>
+            <li>Acceso razonable para carga, descarga y montaje.</li>
+            <li>La solución técnica puede variar según tamaño del evento, número de asistentes y necesidad de audio o iluminación.</li>
+            <li>Coordinación previa para definir alcance del montaje, horarios y condiciones del lugar.</li>
+          </ul>
+
+          <div class="mini-title">Referencia visual de Set up</div>
+          <div class="grid-2">
+            <article class="equipment-card">
+              <img src="rev5.png" alt="Pioneer DDJ-REV5 o REV7">
+              <div class="equipment-body">
+                <h3 class="equipment-title">REV5 / REV7</h3>
+                <p class="equipment-text">Controladores compatibles para formatos de performance y workflow con Serato.</p>
+              </div>
+            </article>
+
+            <article class="equipment-card">
+              <img src="mixer-s7.png" alt="Pioneer DJM-S7 S9 o S11">
+              <div class="equipment-body">
+                <h3 class="equipment-title">DJM-S7 / S9 / S11</h3>
+                <p class="equipment-text">Mixer de referencia para rutinas y control avanzado dentro de cabinas compatibles.</p>
+              </div>
+            </article>
+
+            <article class="equipment-card">
+              <img src="cdj2000nx.png" alt="CDJ 2000NX o HID para Serato">
+              <div class="equipment-body">
+                <h3 class="equipment-title">CDJ 2000NX / HID</h3>
+                <p class="equipment-text">Reproductores compatibles con flujo de trabajo Serato vía HID o cabinas equivalentes.</p>
+              </div>
+            </article>
+
+            <article class="equipment-card">
+              <img src="ddjsr2.png" alt="Pioneer DDJ-SR o SR2">
+              <div class="equipment-body">
+                <h3 class="equipment-title">DDJ-SR o DDJ-SR2</h3>
+                <p class="equipment-text">Alternativa funcional para eventos, cabinas compactas o formatos más reducidos.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Galería</h2>
+          <p>ALgunas fotos de mis últimos eventos.</p>
+
+          <div class="grid-2">
+            <article class="gallery-item">
+              <img src="foto1.jpeg" alt="DJ RED foto 1">
+              <div class="gallery-body">
+                <h3 class="gallery-title">Evento "Mi centro" I</h3>
+                <p class="gallery-text"></p>
+              </div>
+            </article>
+
+            <article class="gallery-item">
+              <img src="foto2.jpeg" alt="DJ RED foto 2">
+              <div class="gallery-body">
+                <h3 class="gallery-title">Evento "Mi centro" II</h3>
+                <p class="gallery-text"></p>
+              </div>
+            </article>
+
+            <article class="gallery-item">
+              <img src="foto3.jpeg" alt="DJ RED foto 3">
+              <div class="gallery-body">
+                <h3 class="gallery-title">Evento "Mi centro" IIII</h3>
+                <p class="gallery-text"></p>
+              </div>
+            </article>
+
+            <article class="gallery-item">
+              <img src="foto4.jpeg" alt="DJ RED foto 4">
+              <div class="gallery-body">
+                <h3 class="gallery-title">Evento "Mi centro" IV</h3>
+                <p class="gallery-text"></p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Booking</h2>
+          <p>Para consultas de fechas, disponibilidad o formato del evento, el canal más directo es WhatsApp.</p>
+          <div class="sticky-actions" style="margin-top:14px; margin-bottom:0;">
+            <a class="btn" href="https://wa.me/56988853172?text=Hola%20DJ%20RED,%20te%20escribo%20por%20un%20evento" target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a>
+            <a class="btn-secondary" href="https://instagram.com/djred_cl" target="_blank" rel="noopener noreferrer">Ver Instagram</a>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <div class="footer">DJ RED · Press Kit / Landing Page</div>
+  </main>
+</body>
+</html>
